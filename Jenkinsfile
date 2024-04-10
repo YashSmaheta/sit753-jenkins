@@ -10,15 +10,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Fetching the source code from the directory path specified by the environment variable"
-                echo "Compiling the code and generating any necessary artifacts"
+                echo "Building is in progress"
+                echo "Buidl done!!!"
             }
         }
 
         stage('Test') {
             steps {
                 echo "Running unit tests"
-                echo "Running integration tests"
+                echo "Testing is Done!!!"
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deploying the application to a testing environment specified by the environment variable"
+                echo "Deployment is done"
             }
         }
 
@@ -43,7 +43,7 @@ pipeline {
 
         stage('Deploy to Production') {
             steps {
-                echo "Deploying the code to the production environment (${env.PRODUCTION_ENVIRONMENT})"
+                echo "Deploying the code to the production: (${env.PRODUCTION_ENVIRONMENT})"
             }
         }
     }
