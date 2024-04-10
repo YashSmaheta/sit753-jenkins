@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DIRECTORY_PATH = "/path/to/code"
+        DIRECTORY_PATH = "main.py"
         TESTING_ENVIRONMENT = "Yash's Test"
         PRODUCTION_ENVIRONMENT = "Yash's Prod"
     }
