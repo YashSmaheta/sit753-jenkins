@@ -46,16 +46,5 @@ pipeline {
                 echo "Deploying the code to the production: (${env.PRODUCTION_ENVIRONMENT})"
             }
         }
-
-        post {
-        success {
-            echo "Pipeline executed successfully!"
-            emailext body: 'Pipeline execution successful.', subject: 'Pipeline Success', to: 'yashmaheta251@gmail.com'
-        }
-        failure {
-            echo "Pipeline execution failed!"
-            emailext body: 'Pipeline execution failed.', subject: 'Pipeline Failure', to: 'yashmaheta251@mail.com'
-        }
-    }
     }
 }
